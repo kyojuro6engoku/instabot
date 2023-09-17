@@ -9,7 +9,7 @@ COPY instagram_downloader_bot.py .
 COPY requirements.txt .
 
 # Install dependencies
-RUN pip install --upgrade pip
+RUN pip install --upgrade 
 # Copy the start.sh script into the container
 COPY start.sh .
 
