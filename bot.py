@@ -30,7 +30,7 @@ def download(update: Update, context: CallbackContext) -> None:
 def main() -> None:
     """Start the bot."""
     # Create an instance of Updater and pass your bot token
-    updater = Updater('YOUR_BOT_TOKEN')
+    updater = Updater('6094342214:AAEppxf8yiho-WFyJAdSss_CTTPK31g2Uyo')
 
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
