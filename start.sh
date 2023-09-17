@@ -5,12 +5,11 @@ FROM python:3.8-slim
 WORKDIR /instabot
 
 # Copy the Python script and requirements.txt into the container
-COPY telegram__bot.py .
+COPY instagram_downloader_bot.py .
 COPY requirements.txt .
 
 # Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
+RUN pip install --upgrade pip
 # Copy the start.sh script into the container
 COPY start.sh .
 
