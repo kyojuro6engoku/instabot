@@ -1,0 +1,13 @@
+import os
+import json
+
+# Load credentials from environment variables
+telegram_token = os.environ.get("TELEGRAM_BOT_TOKEN")
+instagram_username = os.environ.get("INSTAGRAM_USERNAME")
+instagram_password = os.environ.get("INSTAGRAM_PASSWORD")
+
+# If environment variables are not set, you can provide defaults or handle errors.
+if not telegram_token or not instagram_username or not instagram_password:
+    raise ValueError("Please set the necessary environment variables.")
+
+# Now you can use these variables in your bot and downloader logic
