@@ -2,10 +2,10 @@
 FROM python:3.8-slim
 
 # Create a working directory
-WORKDIR /chatgtp
+WORKDIR /instabot
 
 # Copy the Python script and requirements.txt into the container
-COPY telegram_chatgpt_bot.py .
+COPY telegram__bot.py .
 COPY requirements.txt .
 
 # Install dependencies
