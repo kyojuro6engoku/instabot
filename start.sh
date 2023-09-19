@@ -1,20 +1,7 @@
-# Use the official Python image as a parent image
-FROM python:3.8-slim
+#!/bin/bash
 
-# Create a working directory
-WORKDIR /instabot
+# Replace with your actual Telegram Bot token
+export TELEGRAM_TOKEN="YOUR_TELEGRAM_BOT_TOKEN"
 
-# Copy the Python script and requirements.txt into the container
-COPY instagram_downloader_bot.py .
-COPY requirements.txt .
-
-# Install dependencies
-RUN pip install --upgrade 
-# Copy the start.sh script into the container
-COPY start.sh .
-
-# Make the start.sh script executable
-RUN chmod +x start.sh
-
-# Run the start.sh script when the container starts
-CMD ["./start.sh"]
+# Run the bot script
+python bot.py
