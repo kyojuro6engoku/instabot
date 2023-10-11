@@ -13,6 +13,8 @@ RUN pip install -r requirements.txt
 # Upgrade pip (Add this step to upgrade pip)
 RUN pip install --upgrade pip
 
+RUN pip install pyrogram
+
 # Copy your bot's source code into the container
 COPY . .
 
