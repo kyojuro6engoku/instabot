@@ -1,2 +1,3 @@
 python-telegram-bot==20.1
 instaloader==4.7
+pyrogram
