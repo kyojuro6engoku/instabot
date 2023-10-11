@@ -1,14 +1,24 @@
 import os
 from pyrogram import Client, filters
 
-# Create a Telegram bot client
-bot = Client("reel_downloader_bot")
+python
+from pyrogram import Client, filters
+import os
 
-# Define the command handler for downloading reels
-@bot.on_message(filters.command("download_reel"))
-def download_reel(client, message):
-    # Get the reel URL from the message
-    reel_url = message.text.split()[1]
+api_id = "YOUR_API_ID"
+api_hash = "YOUR_API_HASH"
+bot_token = "YOUR_BOT_TOKEN"
+
+Client("my_bot", api_id, api_hash, bot_token=bot_token)
+
+@Client.on_message(filters.text & ~filters.command)
+async def download_reels(client, message):
+    # Check if the message contains a link
+    if "https://www.instagram.com/reel/" in message.text:
+        # Download the reel
+        reel_url = message.text.split()[0]
+        os.system(f"instaloader --no-metadata-json --no-compress-json --no-captions --no-videos --no-pictures --no-video-thumbnails --no-post-metadata --no-story-items --no-stories --no-profile-pic --no-highlights --no-feed --no-saved --no-tagged --no-tagged-posts --no-tagged-posts-full --no-tagged-feed --no-tagged-feed-full --no-tagged-stories --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tagged-stories-full --no-tag
+
 
     # Download the reel using the instaloader library
     from instaloader import Instaloader, Post
