@@ -4,7 +4,7 @@
   "repository": "https://github.com/kyojuro6engoku/instabot",  # Replace with your GitHub repository URL
   "image": "heroku/python",
   "env": {
-    "API_ID": "8914119",       # Your API ID
+    "API_ID": "8914119",       
     "API_HASH": "652bae601b07c928b811bdb310fdb4b0",   # Your API Hash
     "BOT_TOKEN": "6390496152:AAElWXKiIeMSYJZ4InTVAexWJOkqeraEenA"  # Your Bot Token
   },
