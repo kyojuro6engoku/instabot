@@ -17,4 +17,4 @@ RUN pip install --upgrade pip
 COPY . .
 
 # Start the bot when the container runs
-CMD ["python3", "insta2.py"]
+CMD ["python3", "insta.py"]
