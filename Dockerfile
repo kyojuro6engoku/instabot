@@ -10,9 +10,6 @@ COPY requirements.txt requirements.txt
 # Upgrade pip (Add this step to upgrade pip)
 RUN pip install --upgrade pip
 
-RUN pip install -r requirements.txt
-
-
 # Install Python dependencies
 RUN pip install -r requirements.txt
 
