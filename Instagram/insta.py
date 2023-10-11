@@ -1,13 +1,10 @@
 import os
 from pyrogram import Client, filters
 
-python
-from pyrogram import Client, filters
-import os
 
-api_id = "YOUR_API_ID"
-api_hash = "YOUR_API_HASH"
-bot_token = "YOUR_BOT_TOKEN"
+api_id = "8914119"
+api_hash = "652bae601b07c928b811bdb310fdb4b0"
+bot_token = "6390496152:AAElWXKiIeMSYJZ4InTVAexWJOkqeraEenA"
 
 Client("my_bot", api_id, api_hash, bot_token=bot_token)
 
