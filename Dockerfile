@@ -7,6 +7,9 @@ WORKDIR /instabot
 # Copy the requirements.txt file into the container
 COPY requirements.txt requirements.txt
 
+# Upgrade pip (Add this step to upgrade pip)
+RUN pip install --upgrade pip
+
 # Install Python dependencies
 RUN pip install -r requirements.txt
 
