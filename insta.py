@@ -12,7 +12,9 @@ async def start(client, message):
     await message.reply_text("Welcome to the Instagram Reel Downloader bot! Send me an Instagram Reel link, and I'll download it for you.")
 
 @Client.on_message(filters.text & ~filters.command)
-async def download_reels(client, message):
+def your_message_handler(client, message):
+    # Your message handling code here
+
     # Check if the message contains a link
     if "https://www.instagram.com/reel/" in message.text:
         # Rest of your code for downloading reels
