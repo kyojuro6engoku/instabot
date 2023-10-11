@@ -1,15 +1,17 @@
-FROM python:3.10
+# Use the official Python image as the base image
+FROM python:3.8
 
+# Set the working directory in the container
 WORKDIR /instabot
 
-# Copy the requirements.txt file from the host to the /sakura directory in the Docker image
-COPY requirements.txt /instabot/
+# Copy the requirements.txt file into the container
+COPY requirements.txt requirements.txt
 
-# Run the pip install command to install the Python dependencies
+# Install Python dependencies
 RUN pip install -r requirements.txt
 
-RUN python -m pip install pymongo
+# Copy your bot's source code into the container
+COPY . .
 
-COPY ..
-
-CMD ["python3", "insta.py"]
+# Start the bot when the container runs
+CMD ["python", "insta.py"]
