@@ -17,4 +17,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Start the bot when the container runs
-CMD ["python", "insta.py"]
+CMD ["python3", "insta.py"]
