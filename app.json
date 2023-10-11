@@ -1,10 +1,20 @@
 {
-  "name": "instagram-media-downloader-bot",
-  "description": "https://github.com/kyojuro6engoku/instabot",
-  "repository": "https://github.com/kyojuro6engoku/instabot",
-  "image": "image",
+  "name": "insta-reels-downloader-bot",
+  "description": "Your Pyrogram Instagram Reel Downloader Bot",
+  "repository": "https://github.com/kyojuro6engoku/instabot",  # Replace with your GitHub repository URL
+  "image": "heroku/python",
   "env": {
-    "TELEGRAM_TOKEN": "your-telegram-token"
+    "API_ID": "8914119",       # Your API ID
+    "API_HASH": "652bae601b07c928b811bdb310fdb4b0",   # Your API Hash
+    "BOT_TOKEN": "6390496152:AAElWXKiIeMSYJZ4InTVAexWJOkqeraEenA"  # Your Bot Token
   },
-  "stack": "container"
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "stack": "container",
+  "scripts": {
+    "postdeploy": "python insta.py"  # Replace with your bot's script filename
+  }
 }
