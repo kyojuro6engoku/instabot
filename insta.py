@@ -18,4 +18,5 @@ async def download_reels(client, message):
         # Rest of your code for downloading reels
 
 # Start the bot
- bot.run()
+ app = Bot()
+app.run()
