@@ -2,11 +2,10 @@ import os
 from pyrogram import Client, filters
 
 
-api_id = "8914119"
-api_hash = "652bae601b07c928b811bdb310fdb4b0"
-bot_token = "6390496152:AAElWXKiIeMSYJZ4InTVAexWJOkqeraEenA"
+API_ID = "8914119"
+API_HASH = "652bae601b07c928b811bdb310fdb4b0"
+BOT_TOKEN = "6390496152:AAElWXKiIeMSYJZ4InTVAexWJOkqeraEenA"
 
-Client("my_bot", api_id, api_hash, bot_token=bot_token)
 
 @Client.on_message(filters.text & ~filters.command)
 async def download_reels(client, message):
