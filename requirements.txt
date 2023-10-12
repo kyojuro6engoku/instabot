@@ -2,3 +2,7 @@ python-telegram-bot==20.1
 instaloader==4.7
 pyrogram>=2.0.30
 tgcrypto
+aiohttp
+requests
+bs4
+datatime
